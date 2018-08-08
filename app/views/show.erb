@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>One Post</title>
+</head>
+<body>
+  <h1><a href="/posts/<%=@post[:id]%>"><%=@post[:name]%></a></h1>
+  <p><%=@post[:content]%></p>
+  <form action="/posts/<%=@post.id%>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete this post" id="delete">
+  </form>
+</body>
+</html>
