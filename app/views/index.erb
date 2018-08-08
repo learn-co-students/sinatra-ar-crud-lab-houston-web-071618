@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All Posts</title>
+</head>
+<body>
+  <h1>View All Posts:</h1>
+  <% Post.all.each do |post_hash| %>
+    <h3><%=post_hash[:name]%></h3></br>
+    <p><%=post_hash[:content]%></p>
+  <%end%>
+</body>
+</html>
