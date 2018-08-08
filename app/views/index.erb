@@ -9,7 +9,7 @@
 <body>
   <h1>View All Posts:</h1>
   <% Post.all.each do |post_hash| %>
-    <h3><%=post_hash[:name]%></h3></br>
+    <h3><a href="/posts/<%= post_hash[:id] %>"><%=post_hash[:name]%></a></h3></br>
     <p><%=post_hash[:content]%></p>
   <%end%>
 </body>
