@@ -1,0 +1,10 @@
+<h1>All Posts</h1>
+<ul>
+  <% if posts.length == 0 %>
+  <li>No Posts</li>
+  <% elsif posts.each do |post| %>
+<li><a href="posts/<%= post.id %>"><%= post.name %></a></li>
+<li><%= post.content %></li>
+  <% end %>
+  <% end %>
+</ul>

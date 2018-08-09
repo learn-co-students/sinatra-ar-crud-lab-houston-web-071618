@@ -1,0 +1,13 @@
+<h1>Individual Post</h1>
+<ul>
+<li><%= @post.name %></li>
+<li><%= @post.content %></li>
+<li>
+  <a href="/posts/<%= @post.id %>/edit">Edit</a>
+</li>
+</ul>
+
+<form action="/posts/<%= @post.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <button id="delete">DELETE ME</button>
+</form>
